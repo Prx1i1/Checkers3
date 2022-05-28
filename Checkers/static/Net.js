@@ -87,7 +87,7 @@ class Net {
                     window.ui.updateTimer(window.game.gameIsAlive ? data.time : 30)
                     let player = window.game.hasMove ? window.game.isWhite : !window.game.isWhite
                     window.ui.updateTurns(player)
-                    if(data.time >= 30){
+                    if(data.time >= 30 && this.playerBlackLoggedIn && this.playerBlackLoggedIn){
                         window.game.gameIsAlive = false
 
                         if(window.game.hasMove){
@@ -102,7 +102,6 @@ class Net {
                             window.game.gameIsAlive = false
                         }
                     }else{
-                        window.game.gameIsAlive = true
                     }
 
                 }
