@@ -3,7 +3,7 @@ const { is } = require("express/lib/request");
 const app = express()
 const fs = require("fs")
 const path = require('path')
-const PORT = 3000;
+var PORT = process.env.PORT || 3000; 
 app.use(express.static("static"))
 
 app.use(express.json());
