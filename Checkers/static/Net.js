@@ -101,6 +101,8 @@ class Net {
                             document.getElementById("display").innerText = "YOU WON!"
                             window.game.gameIsAlive = false
                         }
+                    }else{
+                        window.game.gameIsAlive = true
                     }
 
                 }
