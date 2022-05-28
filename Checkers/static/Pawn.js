@@ -4,7 +4,7 @@ class Pawn extends THREE.Mesh {
 
     constructor(white, creator) {
         let pawnWhite = new THREE.MeshBasicMaterial({
-            color: 0xaaaaaa,
+            color: 0xcccccc,
             side: THREE.DoubleSide, // dwustronny
             map: new THREE.TextureLoader().load('textures/woodTexture.jpg'), // plik tekstury
             opacity: 1, // stopień przezroczystości
