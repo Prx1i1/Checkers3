@@ -4,7 +4,7 @@ class Pawn extends THREE.Mesh {
 
     constructor(white, creator) {
         let pawnWhite = new THREE.MeshBasicMaterial({
-            color: 0xcccccc,
+            color: 0xffffff,
             side: THREE.DoubleSide, // dwustronny
             map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
             opacity: 1, // stopień przezroczystości
@@ -43,7 +43,7 @@ class Pawn extends THREE.Mesh {
     }
 
     deselect() {
-        this.material.color.setHex(this.isWhite ? 0xaaaaaa : 0xff0000)
+        this.material.color.setHex(this.isWhite ? 0xffffff : 0xff0000)
 
         new TWEEN.Tween(this.position) // co
             .to({

@@ -127,6 +127,9 @@ class Game {
 
             const intersects = this.raycaster.intersectObjects(this.scene.children);
 
+            this.tileList.forEach(element => {
+                element.highlight(false)
+            })
 
             if (intersects.length == 0 && this.selectedPawn != null && !this.isMoving && this.hasMove) {
                 //anim
