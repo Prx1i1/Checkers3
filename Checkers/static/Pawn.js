@@ -73,21 +73,22 @@ class Pawn extends THREE.Mesh {
                 window.game.isMoving = false
                 this.deselect();
                 console.log("moving across finished, moved to:")
+                if(taking){
+                    window.game.pawnsObjTable.forEach(element => {
+                        if(element.position.x == ((original.x + pos.x) /2) && element.position.z == ((original.z + pos.z) /2)){
+                            console.log("REMOVE THE PAWN")
+                            element.geometry.dispose()
+                            element.material.dispose()
+                            window.game.scene.remove(element)
+                        }
+                    });
+                }
                 window.game.pawnsObjTable.forEach(element => {
                     if(element.position.x == original.x && element.position.z == original.z){
                         element.position.x = pos.x
                         element.position.z = pos.z
                     }
                 })
-                if(taking){
-                    window.game.pawnsObjTable.forEach(element => {
-                        if(element.position.x == ((original.x + pos.x) /2) && element.position.z == ((original.z + pos.z) /2)){
-                            console.log("REMOVE THE PAWN")
-                            window.game.scene.remove(element)
-                        }
-                    });
-                }
-
 
             }) // funkcja po zakończeniu animacji
             .start()
