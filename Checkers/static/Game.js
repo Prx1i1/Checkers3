@@ -183,10 +183,6 @@ class Game {
                             console.log("Do Move")
                             this.isMoving = true
                             this.hasMove = false
-                            
-                            // this.tileList.forEach(element => {
-                            //     element.highlight(false)
-                            // })
 
                             this.isTakingTemp = this.getLegalMoves(from).filter(d => d.x == to.x && d.z == to.z)[0].isTaking
 
@@ -209,6 +205,9 @@ class Game {
                             window.ui.updateTable()
                             window.net.move(from, to, this.isTaking)
                             this.selectedPawn = null
+                            this.tileList.forEach(element => {
+                            element.highlight(false)
+                            })
                         }
                     }
                     else {
