@@ -127,15 +127,15 @@ class Game {
 
             const intersects = this.raycaster.intersectObjects(this.scene.children);
 
-            this.tileList.forEach(element => {
-                element.highlight(false)
-            })
 
             if (intersects.length == 0 && this.selectedPawn != null && !this.isMoving && this.hasMove) {
                 //anim
                 this.isMoving = true
                 this.selectedPawn.deselect()
                 this.selectedPawn = null
+                this.tileList.forEach(element => {
+                    element.highlight(false)
+                })
             }
 
             if (intersects.length > 0 && !this.isMoving && this.hasMove) {
@@ -184,9 +184,9 @@ class Game {
                             this.isMoving = true
                             this.hasMove = false
                             
-                            this.tileList.forEach(element => {
-                                element.highlight(false)
-                            })
+                            // this.tileList.forEach(element => {
+                            //     element.highlight(false)
+                            // })
 
                             this.isTakingTemp = this.getLegalMoves(from).filter(d => d.x == to.x && d.z == to.z)[0].isTaking
 
