@@ -2,7 +2,7 @@ class Tile extends THREE.Mesh {
     static boardWhite = new THREE.MeshBasicMaterial({
         color: 0x999999,
         side: THREE.DoubleSide, // dwustronny
-        map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
+        map: new THREE.TextureLoader().load('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg'), // plik tekstury
         opacity: 1, // stopień przezroczystości
 
     })
@@ -10,7 +10,7 @@ class Tile extends THREE.Mesh {
     static boardBlack = new THREE.MeshBasicMaterial({
         color: 0x000000,
         side: THREE.DoubleSide, // dwustronny
-        map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
+        map: new THREE.TextureLoader().load('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg'), // plik tekstury
         opacity: 1, // stopień przezroczystości
 
     })
@@ -18,7 +18,7 @@ class Tile extends THREE.Mesh {
     static boardYellow = new THREE.MeshBasicMaterial({
         color: 0xffff00,
         side: THREE.DoubleSide, // dwustronny
-        map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
+        map: new THREE.TextureLoader().load('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg'), // plik tekstury
         opacity: 1, // stopień przezroczystości
 
     })

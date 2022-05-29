@@ -6,7 +6,7 @@ class Pawn extends THREE.Mesh {
         let pawnWhite = new THREE.MeshBasicMaterial({
             color: 0xffffff,
             side: THREE.DoubleSide, // dwustronny
-            map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
+            map: new THREE.TextureLoader().load('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg'), // plik tekstury
             opacity: 1, // stopień przezroczystości
 
         })
@@ -14,7 +14,7 @@ class Pawn extends THREE.Mesh {
         let pawnBlack = new THREE.MeshBasicMaterial({
             color: 0xff0000,
             side: THREE.DoubleSide, // dwustronny
-            map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
+            map: new THREE.TextureLoader().load('https://www.myfreetextures.com/wp-content/uploads/2014/10/seamless-wood-background-1.jpg'), // plik tekstury
             opacity: 1, // stopień przezroczystości
 
         })
