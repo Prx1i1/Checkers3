@@ -1,6 +1,6 @@
 class Tile extends THREE.Mesh {
     static boardWhite = new THREE.MeshBasicMaterial({
-        color: 0xffffff,
+        color: 0x999999,
         side: THREE.DoubleSide, // dwustronny
         map: new THREE.TextureLoader().load('https://i.imgur.com/Ncrkb8L.png'), // plik tekstury
         opacity: 1, // stopień przezroczystości
